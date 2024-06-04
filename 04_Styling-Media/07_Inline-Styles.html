@@ -1,0 +1,393 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Satır İçi Stiller</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../01_Start/index.html"><strong aria-hidden="true">1.</strong> React ile Başlarken</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../01_Start/01_React.html"><strong aria-hidden="true">1.1.</strong> React</a></li><li class="chapter-item expanded "><a href="../01_Start/02_Introduction.html"><strong aria-hidden="true">1.2.</strong> Giriş</a></li><li class="chapter-item expanded "><a href="../01_Start/03_Virtual-DOM.html"><strong aria-hidden="true">1.3.</strong> Sanal DOM</a></li><li class="chapter-item expanded "><a href="../01_Start/04_SPA-MPA.html"><strong aria-hidden="true">1.4.</strong> SPA vs. MPA</a></li><li class="chapter-item expanded "><a href="../01_Start/05_Setting-Up.html"><strong aria-hidden="true">1.5.</strong> Kurulum</a></li><li class="chapter-item expanded "><a href="../01_Start/06_Installation.html"><strong aria-hidden="true">1.6.</strong> Yükleme</a></li><li class="chapter-item expanded "><a href="../01_Start/07_File-Structure.html"><strong aria-hidden="true">1.7.</strong> Dosya Yapısı</a></li><li class="chapter-item expanded "><a href="../01_Start/08_Assignment.html"><strong aria-hidden="true">1.8.</strong> Görev</a></li></ol></li><li class="chapter-item expanded "><a href="../02_Components/index.html"><strong aria-hidden="true">2.</strong> Bileşenleri Anlamak</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../02_Components/01_Components.html"><strong aria-hidden="true">2.1.</strong> Bileşenler</a></li><li class="chapter-item expanded "><a href="../02_Components/02_Rendering-Components.html"><strong aria-hidden="true">2.2.</strong> Bileşenleri Render Etme</a></li><li class="chapter-item expanded "><a href="../02_Components/03_JSX.html"><strong aria-hidden="true">2.3.</strong> JSX'e Giriş</a></li><li class="chapter-item expanded "><a href="../02_Components/04_Embedding-Expressions.html"><strong aria-hidden="true">2.4.</strong> İfadeleri Gömme</a></li><li class="chapter-item expanded "><a href="../02_Components/05_JSX-HTML.html"><strong aria-hidden="true">2.5.</strong> JSX vs. HTML</a></li><li class="chapter-item expanded "><a href="../02_Components/06_Assignment.html"><strong aria-hidden="true">2.6.</strong> Görev</a></li></ol></li><li class="chapter-item expanded "><a href="../03_Props-Components/index.html"><strong aria-hidden="true">3.</strong> Bileşenlerde Props Kullanımı</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../03_Props-Components/01_Probs.html"><strong aria-hidden="true">3.1.</strong> Props</a></li><li class="chapter-item expanded "><a href="../03_Props-Components/02_Usage.html"><strong aria-hidden="true">3.2.</strong> Kullanım</a></li><li class="chapter-item expanded "><a href="../03_Props-Components/03_Assignment.html"><strong aria-hidden="true">3.3.</strong> Görev</a></li></ol></li><li class="chapter-item expanded "><a href="../04_Styling-Media/index.html"><strong aria-hidden="true">4.</strong> Stil ve Medya</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../04_Styling-Media/01_Tailwind-Install.html"><strong aria-hidden="true">4.1.</strong> React'te Tailwind Kurulumu (Vite)</a></li><li class="chapter-item expanded "><a href="../04_Styling-Media/02_Image.html"><strong aria-hidden="true">4.2.</strong> Resim Kullanımı</a></li><li class="chapter-item expanded "><a href="../04_Styling-Media/03_React-Icon.html"><strong aria-hidden="true">4.3.</strong> React İkon</a></li><li class="chapter-item expanded "><a href="../04_Styling-Media/04_Assignment.html"><strong aria-hidden="true">4.4.</strong> Görev</a></li><li class="chapter-item expanded "><a href="../04_Styling-Media/05_Render-Multiple.html"><strong aria-hidden="true">4.5.</strong> Birden Çok Bileşeni Render Etme</a></li><li class="chapter-item expanded "><a href="../04_Styling-Media/06_Styling.html"><strong aria-hidden="true">4.6.</strong> Stil</a></li><li class="chapter-item expanded "><a href="../04_Styling-Media/07_Inline-Styles.html" class="active"><strong aria-hidden="true">4.7.</strong> Satır İçi Stiller</a></li><li class="chapter-item expanded "><a href="../04_Styling-Media/08_External-Stylesheets.html"><strong aria-hidden="true">4.8.</strong> Harici Stil Sayfaları</a></li><li class="chapter-item expanded "><a href="../04_Styling-Media/09_CSS-Modules.html"><strong aria-hidden="true">4.9.</strong> CSS Modülleri</a></li><li class="chapter-item expanded "><a href="../04_Styling-Media/10_React-Styling.html"><strong aria-hidden="true">4.10.</strong> React Stil Kütüphaneleri</a></li><li class="chapter-item expanded "><a href="../04_Styling-Media/11_Assignment.html"><strong aria-hidden="true">4.11.</strong> Görev</a></li></ol></li><li class="chapter-item expanded "><a href="../05_Hooks/index.html"><strong aria-hidden="true">5.</strong> Kancalara Giriş</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../05_Hooks/01_Hooks.html"><strong aria-hidden="true">5.1.</strong> Hooks</a></li><li class="chapter-item expanded "><a href="../05_Hooks/02_useState.html"><strong aria-hidden="true">5.2.</strong> useState</a></li><li class="chapter-item expanded "><a href="../05_Hooks/03_Data-Flows-Down.html"><strong aria-hidden="true">5.3.</strong> Veri Aşağı Akışı</a></li><li class="chapter-item expanded "><a href="../05_Hooks/04_Assignment.html"><strong aria-hidden="true">5.4.</strong> Görev</a></li></ol></li><li class="chapter-item expanded "><a href="../06_Effects/index.html"><strong aria-hidden="true">6.</strong> Etkilerle Çalışmak</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../06_Effects/01_useEffect.html"><strong aria-hidden="true">6.1.</strong> useEffect</a></li><li class="chapter-item expanded "><a href="../06_Effects/02_Dependancy-Array.html"><strong aria-hidden="true">6.2.</strong> Bağımlılık Dizisi</a></li><li class="chapter-item expanded "><a href="../06_Effects/03_Effect-Cleanup.html"><strong aria-hidden="true">6.3.</strong> Etki Temizleme</a></li><li class="chapter-item expanded "><a href="../06_Effects/04_Assignment.html"><strong aria-hidden="true">6.4.</strong> Görev</a></li></ol></li><li class="chapter-item expanded "><a href="../07_Dynamic-Rendering/index.html"><strong aria-hidden="true">7.</strong> Dinamik Render</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../07_Dynamic-Rendering/01_Render-Lists.html"><strong aria-hidden="true">7.1.</strong> Listeleri Render Etme</a></li><li class="chapter-item expanded "><a href="../07_Dynamic-Rendering/02_Conditional-Rendering.html"><strong aria-hidden="true">7.2.</strong> Koşullu Render</a></li><li class="chapter-item expanded "><a href="../07_Dynamic-Rendering/03_Inline-Operator.html"><strong aria-hidden="true">7.3.</strong> Satır İçi && Operatörü</a></li><li class="chapter-item expanded "><a href="../07_Dynamic-Rendering/04_If-Else-Pattern.html"><strong aria-hidden="true">7.4.</strong> If-Else Pattern</a></li><li class="chapter-item expanded "><a href="../07_Dynamic-Rendering/05_Assignment.html"><strong aria-hidden="true">7.5.</strong> Görev</a></li><li class="chapter-item expanded "><a href="../07_Dynamic-Rendering/06_Controlled-Uncontrolled.html"><strong aria-hidden="true">7.6.</strong> Kontrollü ve Kontrolsüz Bileşenler</a></li><li class="chapter-item expanded "><a href="../07_Dynamic-Rendering/07_Handle-Form.html"><strong aria-hidden="true">7.7.</strong> Formu Yönetme</a></li><li class="chapter-item expanded "><a href="../07_Dynamic-Rendering/08_Event-Handling.html"><strong aria-hidden="true">7.8.</strong> Etkinlik Yönetimi</a></li><li class="chapter-item expanded "><a href="../07_Dynamic-Rendering/09_Passing-Arguments.html"><strong aria-hidden="true">7.9.</strong> Argümanları Geçme</a></li><li class="chapter-item expanded "><a href="../07_Dynamic-Rendering/10_Commont-Events.html"><strong aria-hidden="true">7.10.</strong> Yaygın Etkinlikler</a></li><li class="chapter-item expanded "><a href="../07_Dynamic-Rendering/11_Assignment.html"><strong aria-hidden="true">7.11.</strong> Görev</a></li></ol></li><li class="chapter-item expanded "><a href="../08_Routing/index.html"><strong aria-hidden="true">8.</strong> React'te Yönlendirme</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../08_Routing/01_React-Router.html"><strong aria-hidden="true">8.1.</strong> React Router</a></li><li class="chapter-item expanded "><a href="../08_Routing/02_Set-Up.html"><strong aria-hidden="true">8.2.</strong> Kurulum</a></li><li class="chapter-item expanded "><a href="../08_Routing/03_React-Router-Basics.html"><strong aria-hidden="true">8.3.</strong> React Router Temelleri</a></li><li class="chapter-item expanded "><a href="../08_Routing/04_Nested-Route.html"><strong aria-hidden="true">8.4.</strong> İç İçe Rota</a></li><li class="chapter-item expanded "><a href="../08_Routing/05_Assignment.html"><strong aria-hidden="true">8.5.</strong> Görev</a></li></ol></li><li class="chapter-item expanded "><a href="../09_Class-Component/index.html"><strong aria-hidden="true">9.</strong> React'te Sınıf Bileşenleri</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../09_Class-Component/01_Intro.html"><strong aria-hidden="true">9.1.</strong> Sınıf Bileşenlerine Giriş</a></li><li class="chapter-item expanded "><a href="../09_Class-Component/02_Component-Constructor.html"><strong aria-hidden="true">9.2.</strong> Bileşen Kurucusu</a></li><li class="chapter-item expanded "><a href="../09_Class-Component/03_Functional-vs-Class.html"><strong aria-hidden="true">9.3.</strong> Fonksiyonel vs. Sınıf Bileşenleri</a></li><li class="chapter-item expanded "><a href="../09_Class-Component/04_Probs-Class.html"><strong aria-hidden="true">9.4.</strong> Sınıf Bileşenlerinde Props</a></li><li class="chapter-item expanded "><a href="../09_Class-Component/05_State-Class.html"><strong aria-hidden="true">9.5.</strong> Sınıf Bileşenlerinde Durum</a></li><li class="chapter-item expanded "><a href="../09_Class-Component/06_Assignment.html"><strong aria-hidden="true">9.6.</strong> Görev</a></li></ol></li><li class="chapter-item expanded "><a href="../10_Lifecycle/index.html"><strong aria-hidden="true">10.</strong> React Yaşam Döngüsü Metodları</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../10_Lifecycle/01_Intro.html"><strong aria-hidden="true">10.1.</strong> React Yaşam Döngüsüne Giriş</a></li><li class="chapter-item expanded "><a href="../10_Lifecycle/02_Mounting.html"><strong aria-hidden="true">10.2.</strong> Montaj</a></li><li class="chapter-item expanded "><a href="../10_Lifecycle/03_Demonstrate.html"><strong aria-hidden="true">10.3.</strong> Montajı Gösterme</a></li><li class="chapter-item expanded "><a href="../10_Lifecycle/04_Updating.html"><strong aria-hidden="true">10.4.</strong> Güncelleme</a></li><li class="chapter-item expanded "><a href="../10_Lifecycle/05_Unmounting.html"><strong aria-hidden="true">10.5.</strong> Sökme</a></li><li class="chapter-item expanded "><a href="../10_Lifecycle/06_Assignment.html"><strong aria-hidden="true">10.6.</strong> Görev</a></li></ol></li><li class="chapter-item expanded "><a href="../11_State-Management/index.html"><strong aria-hidden="true">11.</strong> React'te Durum Yönetimi</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../11_State-Management/01_Prob-Drilling.html"><strong aria-hidden="true">11.1.</strong> Props Delme</a></li><li class="chapter-item expanded "><a href="../11_State-Management/02_Context-API.html"><strong aria-hidden="true">11.2.</strong> React Context API</a></li><li class="chapter-item expanded "><a href="../11_State-Management/03_Assignment.html"><strong aria-hidden="true">11.3.</strong> Görev</a></li></ol></li><li class="chapter-item expanded "><a href="../12_Higher-Order/index.html"><strong aria-hidden="true">12.</strong> Yüksek Dereceli Bileşenler</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../12_Higher-Order/01_High-Order.html"><strong aria-hidden="true">12.1.</strong> Yüksek Dereceli Bileşenler</a></li><li class="chapter-item expanded "><a href="../12_Higher-Order/02_Use-Cases.html"><strong aria-hidden="true">12.2.</strong> Yüksek Dereceli Bileşenlerin Kullanım Alanları</a></li><li class="chapter-item expanded "><a href="../12_Higher-Order/03_Creation-HOCs.html"><strong aria-hidden="true">12.3.</strong> Yüksek Dereceli Bileşenler Oluşturma</a></li><li class="chapter-item expanded "><a href="../12_Higher-Order/04_Assignment.html"><strong aria-hidden="true">12.4.</strong> Görev</a></li></ol></li><li class="chapter-item expanded "><a href="../13_Error-Handling/index.html"><strong aria-hidden="true">13.</strong> React'te Hata Yönetimi</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../13_Error-Handling/01_Error-Boundaries.html"><strong aria-hidden="true">13.1.</strong> Hata Sınırları</a></li><li class="chapter-item expanded "><a href="../13_Error-Handling/02_Use-Cases.html"><strong aria-hidden="true">13.2.</strong> Hata Sınırlarının Kullanım Alanları</a></li><li class="chapter-item expanded "><a href="../13_Error-Handling/03_Error-Handling.html"><strong aria-hidden="true">13.3.</strong> Hata Sınırları ile Hata Yönetimi</a></li><li class="chapter-item expanded "><a href="../13_Error-Handling/04_Assignment.html"><strong aria-hidden="true">13.4.</strong> Görev</a></li></ol></li><li class="chapter-item expanded "><a href="../14_useState-useEffect/index.html"><strong aria-hidden="true">14.</strong> useState ve useEffect Ötesinde Daha Fazla Kanca</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../14_useState-useEffect/01_useReducer.html"><strong aria-hidden="true">14.1.</strong> useReducer</a></li><li class="chapter-item expanded "><a href="../14_useState-useEffect/02_useCallback.html"><strong aria-hidden="true">14.2.</strong> useCallback</a></li><li class="chapter-item expanded "><a href="../14_useState-useEffect/03_useMemo.html"><strong aria-hidden="true">14.3.</strong> useMemo</a></li><li class="chapter-item expanded "><a href="../14_useState-useEffect/04_Assignment.html"><strong aria-hidden="true">14.4.</strong> Görev</a></li><li class="chapter-item expanded "><a href="../14_useState-useEffect/05_Custom-Hooks.html"><strong aria-hidden="true">14.5.</strong> Özel Kancalar</a></li><li class="chapter-item expanded "><a href="../14_useState-useEffect/06_When-Why.html"><strong aria-hidden="true">14.6.</strong> Ne Zaman ve Neden?</a></li><li class="chapter-item expanded "><a href="../14_useState-useEffect/07_Assignment.html"><strong aria-hidden="true">14.7.</strong> Görev</a></li></ol></li><li class="chapter-item expanded "><a href="../15_Optimization/index.html"><strong aria-hidden="true">15.</strong> React'te Performans Optimizasyonu</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../15_Optimization/01_Optimization.html"><strong aria-hidden="true">15.1.</strong> React Performans Optimizasyonu</a></li><li class="chapter-item expanded "><a href="../15_Optimization/02_Common_Bottlenecks.html"><strong aria-hidden="true">15.2.</strong> Yaygın Performans Tıkanıklıkları</a></li><li class="chapter-item expanded "><a href="../15_Optimization/03_Techniques.html"><strong aria-hidden="true">15.3.</strong> Optimizasyon Teknikleri</a></li><li class="chapter-item expanded "><a href="../15_Optimization/04_Assignment.html"><strong aria-hidden="true">15.4.</strong> Görev</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="inline-stil-kullanımı"><a class="header" href="#inline-stil-kullanımı">Inline Stil Kullanımı</a></h1>
+<h2 id="giriş"><a class="header" href="#giriş">Giriş</a></h2>
+<p>React projelerinde stil tanımlama yöntemlerinden biri olan "inline styles", özellikle dinamik ve komponent bazlı stillendirmede yaygın olarak kullanılır. Bu eğitimde, React'te inline stil kullanımını detaylandıracak, önemli noktalara dikkat çekerek ve doğru bilinen yanlışları eleştirerek kapsamlı bir kılavuz sunacağız. Eğitim boyunca yapılandırılmış ve açıklamalı kod parçacıkları ile konunun daha iyi anlaşılmasını hedefleyeceğiz.</p>
+<h2 id="1-proje-yapılandırması"><a class="header" href="#1-proje-yapılandırması">1. Proje Yapılandırması</a></h2>
+<p>React projesinde inline stil kullanımı için öncelikle doğru dosya yapısını kurmalıyız. Aşağıdaki adımları izleyerek proje yapınızı oluşturun:</p>
+<ol>
+<li>
+<p><strong>Komponentler için klasör oluşturun</strong>: Proje dizininizin <code>src</code> klasörü içinde, <code>components</code> adında yeni bir klasör oluşturun (eğer zaten yoksa).</p>
+<pre><code class="language-bash">mkdir src/components
+</code></pre>
+</li>
+<li>
+<p><strong>Yeni bir JSX dosyası oluşturun</strong>: <code>components</code> klasörü içinde, istediğiniz komponent adında yeni bir JSX dosyası oluşturun, örneğin <code>InlineStyledText.jsx</code>.</p>
+<pre><code class="language-bash">touch src/components/InlineStyledText.jsx
+</code></pre>
+</li>
+<li>
+<p><strong>Komponenti oluşturun</strong>: <code>InlineStyledText.jsx</code> dosyasını açarak aşağıdaki gibi basit bir komponent tanımlayın.</p>
+<pre><code class="language-jsx">// src/components/InlineStyledText.jsx
+import React from 'react';
+
+const InlineStyledText = () =&gt; {
+  const style = {
+    color: 'blue',
+    fontSize: '20px',
+    margin: '10px'
+  };
+
+  return (
+    &lt;p style={style}&gt;Bu metin inline stil ile stilize edilmiştir.&lt;/p&gt;
+  );
+};
+
+export default InlineStyledText;
+</code></pre>
+</li>
+<li>
+<p><strong>Komponenti kullanın</strong>: Parent komponentinizde veya <code>App.jsx</code> dosyasında <code>InlineStyledText</code> komponentini içe aktarın ve JSX içinde kullanın.</p>
+<pre><code class="language-jsx">// src/App.jsx
+import React from 'react';
+import InlineStyledText from './components/InlineStyledText';
+
+const App = () =&gt; {
+  return (
+    &lt;div&gt;
+      &lt;InlineStyledText /&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default App;
+</code></pre>
+</li>
+<li>
+<p><strong>Geliştirme sunucusunu başlatın</strong>: Proje klasörüne gidin ve geliştirme sunucusunu başlatın.</p>
+<pre><code class="language-bash">npm run dev
+</code></pre>
+</li>
+</ol>
+<h2 id="2-inline-stil-kullanımının-avantaj-ve-dezavantajları"><a class="header" href="#2-inline-stil-kullanımının-avantaj-ve-dezavantajları">2. Inline Stil Kullanımının Avantaj ve Dezavantajları</a></h2>
+<p><strong>Avantajlar:</strong></p>
+<ul>
+<li><strong>Dinamik Stil</strong>: JavaScript değişkenleri kullanarak stilleri dinamik olarak değiştirebilirsiniz.</li>
+<li><strong>Enkapsülasyon</strong>: Her komponentin kendi stili olduğu için stil çakışmaları minimize edilir.</li>
+<li><strong>Kolaylık</strong>: Küçük ve basit stiller için hızlı ve kolay bir çözüm sunar.</li>
+</ul>
+<p><strong>Dezavantajlar:</strong></p>
+<ul>
+<li><strong>Bakım Zorluğu</strong>: Büyük projelerde inline stil kullanımı kodun okunabilirliğini ve bakımını zorlaştırabilir.</li>
+<li><strong>Performans</strong>: Büyük ve kompleks stillerde performans sorunları yaşanabilir.</li>
+<li><strong>Yeniden Kullanılabilirlik</strong>: Stil tanımları komponent seviyesinde olduğu için yeniden kullanılabilirliği düşüktür.</li>
+</ul>
+<h2 id="3-kritik-noktalar-ve-doğru-bilinen-yanlışlar"><a class="header" href="#3-kritik-noktalar-ve-doğru-bilinen-yanlışlar">3. Kritik Noktalar ve Doğru Bilinen Yanlışlar</a></h2>
+<ol>
+<li>
+<p><strong>JavaScript Nesneleri ile Stil Tanımlama</strong>: Inline stil tanımlarken stil özellikleri JavaScript nesneleri olarak tanımlanır. CSS'deki kebab-case yerine camelCase kullanılır. Örneğin <code>background-color</code> yerine <code>backgroundColor</code>.</p>
+<p>Yanlış:</p>
+<pre><code class="language-jsx">const style = {
+  'background-color': 'red'
+};
+</code></pre>
+<p>Doğru:</p>
+<pre><code class="language-jsx">const style = {
+  backgroundColor: 'red'
+};
+</code></pre>
+</li>
+<li>
+<p><strong>Sayı Değerleri</strong>: Birimler gerektiren CSS özelliklerinde (örneğin <code>px</code>, <code>em</code>), sayısal değerler string olarak verilmelidir.</p>
+<p>Yanlış:</p>
+<pre><code class="language-jsx">const style = {
+  margin: 10
+};
+</code></pre>
+<p>Doğru:</p>
+<pre><code class="language-jsx">const style = {
+  margin: '10px'
+};
+</code></pre>
+</li>
+<li>
+<p><strong>Bileşik Stiller</strong>: Birden fazla stil özelliği aynı anda dinamik olarak değiştirilebilir.</p>
+<p>Yanlış:</p>
+<pre><code class="language-jsx">const style = {
+  color: isActive ? 'green' : 'red'
+};
+</code></pre>
+<p>Doğru:</p>
+<pre><code class="language-jsx">const style = {
+  color: isActive ? 'green' : 'red',
+  fontWeight: isActive ? 'bold' : 'normal'
+};
+</code></pre>
+</li>
+</ol>
+<h2 id="4-Örnekler-ve-uygulamalar"><a class="header" href="#4-Örnekler-ve-uygulamalar">4. Örnekler ve Uygulamalar</a></h2>
+<p><strong>Durum Bazlı Stil Değiştirme</strong>:</p>
+<pre><code class="language-jsx">// src/components/StatusStyledText.jsx
+import React from 'react';
+
+const StatusStyledText = ({ isActive }) =&gt; {
+  const style = {
+    color: isActive ? 'green' : 'red',
+    fontWeight: isActive ? 'bold' : 'normal',
+    fontSize: '16px'
+  };
+
+  return (
+    &lt;p style={style}&gt;
+      {isActive ? 'Aktif' : 'Pasif'}
+    &lt;/p&gt;
+  );
+};
+
+export default StatusStyledText;
+</code></pre>
+<p><strong>Dinamik Stil Değişimi</strong>:</p>
+<pre><code class="language-jsx">// src/components/DynamicStyledButton.jsx
+import React, { useState } from 'react';
+
+const DynamicStyledButton = () =&gt; {
+  const [isClicked, setIsClicked] = useState(false);
+
+  const handleClick = () =&gt; {
+    setIsClicked(!isClicked);
+  };
+
+  const style = {
+    backgroundColor: isClicked ? 'blue' : 'gray',
+    color: 'white',
+    padding: '10px 20px',
+    border: 'none',
+    cursor: 'pointer'
+  };
+
+  return (
+    &lt;button style={style} onClick={handleClick}&gt;
+      {isClicked ? 'Tıklandı' : 'Tıkla'}
+    &lt;/button&gt;
+  );
+};
+
+export default DynamicStyledButton;
+</code></pre>
+<h2 id="sonuç"><a class="header" href="#sonuç">Sonuç</a></h2>
+<p>React'te inline stil kullanımı, doğru ve etkili bir şekilde kullanıldığında projelerin stil yönetimini kolaylaştırabilir. Ancak, büyük ve karmaşık projelerde dikkatli olunması ve alternatif stil yönetim yöntemlerinin (örneğin CSS dosyaları, CSS-in-JS kütüphaneleri) değerlendirilmesi önemlidir. Bu eğitimde sunulan bilgiler ve kod örnekleri ile inline stil kullanımının temellerini ve kritik noktalarını öğrenmiş oldunuz. React geliştirme süreçlerinizde bu bilgileri uygulayarak daha temiz ve yönetilebilir kodlar yazabilirsiniz.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../04_Styling-Media/06_Styling.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../04_Styling-Media/08_External-Stylesheets.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../04_Styling-Media/06_Styling.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../04_Styling-Media/08_External-Stylesheets.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
