@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+
+
+/* Header Styles */
+header {
+  padding: 2em 0;
+  text-align: center;
+  color: #f5f5f5;
+  background-color: black;
+}
+
+.header-content {
+  margin-top: 2em;
+}
+
+/* Header Text Styles */
+.header-content h1,
+.header-content p {
+  font-family: "Poppins", sans-serif;
+}
+
+.header-content h1 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em; /* Provide some spacing between h1 and p */
+}
+
+.header-content p {
+  font-size: 1.2em;
+  margin-bottom: 1em; /* Adjust spacing between paragraphs */
+}
+
+/* Header Button Styles */
+.header-content button {
+  margin-top: 1em;
+  padding: 0.75em 2em;
+  font-size: 1.2em;
+  background-color: #213555;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.header-content button:hover {
+  background-color: rgba(0, 123, 255, 0.65); /* Add some transparency to the hover color */
+}

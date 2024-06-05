@@ -1,0 +1,129 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+body {
+  margin: 0;
+  background-color: #000000;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  transition: a ll 0.3s ease;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+.Heading {
+  margin: 2rem;
+  margin-bottom: 90px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+.container {
+  background-color: #ffffff;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 35%;
+  padding: 4rem;
+  margin: 0rem auto;
+  height: calc(80% - 12rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+.total-amount-circle {
+  transition: all 0.3s ease;
+  border: 2px solid #d6cca4;
+  padding: 2rem;
+  cursor: pointer;
+  width: 15rem;
+  height: 2rem;
+  background-color: #ff0000;
+  border-radius: 20px;
+}
+.card-text {
+  transition: all 0.3s ease;
+  color: #ffcc00;
+  display: flex;
+  font-size: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+.buttons {
+  display: flex;
+  gap: 1;
+  padding-top: 2rem;
+}
+.buttons .btn_one,
+.btn_two,
+.btn_three {
+  margin: 10px;
+  padding: 15px 30px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: #000000;
+  border-radius: 10px;
+  display: block;
+  border: 0px;
+  font-weight: 700;
+  box-shadow: 0px 0px 14px -7px #d6cca4;
+  background-image: white;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+.btn_one:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
+.btn_one:active {
+  transform: scale(0.95);
+}
+.btn_two:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
+.btn_two:active {
+  transform: scale(0.95);
+}
+.btn_three:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
+.btn_three:active {
+  transform: scale(0.95);
+}
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+    padding: 50px;
+  }
+  .total-amount-circle {
+    width: 5rem;
+    height: 10px;
+    padding-bottom: 40px;
+  }
+  .card-text {
+    color: #d6cca4;
+    display: flex;
+    font-size: 2rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .card-text {
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .buttons {
+    display: flex;
+    flex-direction: column;
+  }
+}
