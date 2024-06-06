@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+.loadingContainer {
+  background-color: #fce8e6;
+  padding: 16px;
+  text-align: center;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.movieGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.movieCard {
+  background-color: #fcdbd9;
+  border: 1px solid #b0afae;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: box-shadow 0.3s;
+}
+
+.movieCard:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.movieImage {
+  width: 25%;
+  height: 100%;
+  margin-bottom: 16px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.movieDetails {
+  margin-bottom: 16px;
+}
+
+.movieTitle {
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+
+.movieListContainer {
+  background-color: #fce8e6;
+  padding: 16px;
+  text-align: center;
+}
+
+.movieListHeading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 32px;
+}
+
+.movieGrid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 16px;
+}
+
+@media (min-width: 640px) {
+  .movieGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .movieGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .movieGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.movieCard {
+  background-color: #fcdbd9;
+  border: 1px solid #b0afae;
+  padding: 16px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: box-shadow 0.3s;
+}
+
+.movieCard:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.movieImage {
+  width: 100%;
+  max-height: 100%;
+  margin-bottom: 16px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.movieDetails {
+  margin-top: 16px;
+}
+
+.movieTitle {
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}

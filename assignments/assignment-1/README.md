@@ -1,4 +1,4 @@
-# Görev 1: React'ta Basit Bileşen (Component) Render Etme
+# React'ta Basit Bileşen (Component) Render Etme
 
 ## Amaç
 

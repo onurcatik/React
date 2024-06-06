@@ -1,4 +1,4 @@
-# Görev: Ürün Vitrini Oluşturma
+# Ürün Vitrini Oluşturma
 
 ## Amaç:
 

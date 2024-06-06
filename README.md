@@ -1,6 +1,6 @@
 # React El Kitabı
 
-React El Kitabı'na hoş geldiniz! Bu kılavuz, React'i temel bilgilerden daha ileri kavramlara kadar kapsamlı bir şekilde anlamanızı sağlamak için tasarlanmıştır. İster başlamak isteyen bir acemi, ister bilgilerini derinleştirmeyi amaçlayan deneyimli bir geliştirici olun, bu el kitabında herkes için bir şeyler var.
+[React El Kitabı](https://onurcatik.github.io/React/)'na hoş geldiniz! Bu kılavuz, React'i temel bilgilerden daha ileri kavramlara kadar [görevlerle](assignments/README.md) birlikte kapsamlı bir şekilde anlamanızı sağlamak için tasarlanmıştır. İster başlamak isteyen bir acemi, ister bilgilerini derinleştirmeyi amaçlayan deneyimli bir geliştirici olun, bu el kitabında herkes için bir şeyler var.
 
 ## İçindekiler
 
